@@ -8,11 +8,13 @@ const App = () => {
   const [purpose, setPurpose] = useState("Meeting Request");
   const [key, setKey] = useState("");
   const [generatedEmail, setGeneratedEmail] = useState("");
+  const API_URL = process.env.NEXT_PUBLIC_API_URL
+
 
   const handleGenerate = async () => {
     console.log(name, purpose, key);
 
-    const response = await axios.post("http://localhost:3000/api/chat", {
+    const response = await axios.post(`${API_URL}/api/chat`, {
       name: name,
       purpose: purpose,
       keyPoints: key,
