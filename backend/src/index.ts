@@ -9,6 +9,8 @@ app.use(cors())
 app.use(express.json())
 app.use('/api/chat',router)
 
+const port = process.env.PORT || 8000
+
 const model = new ChatOpenAI({
     temperature: 0.7,
     apiKey: process.env.OPENAI_TOKEN,
@@ -40,4 +42,4 @@ app.post('/',async(req,res)=>{
     }
 })
 
-app.listen(3000)
+app.listen(port)
