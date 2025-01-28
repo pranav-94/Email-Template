@@ -20,6 +20,7 @@ const App = () => {
       keyPoints: key,
     });
 
+    console.log(response)
     setGeneratedEmail(response.data.data.content);
   };
 
