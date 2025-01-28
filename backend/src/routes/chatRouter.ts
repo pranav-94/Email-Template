@@ -15,6 +15,8 @@ router.post('/',async(req,res)=>{
     - Purpose: ${purpose},
     - key Points: ${keyPoints}
     `
+
+    try{
     const chatCompletion = await client.chatCompletion({
 	  model: "mistralai/Mistral-7B-Instruct-v0.3",
 	  messages: [
@@ -31,6 +33,14 @@ router.post('/',async(req,res)=>{
         msg: 'success',
         data: chatCompletion.choices[0].message
     })
+    }
+
+    catch(err){
+        res.status(403).json({
+            msg: 'failed to generate',
+            data: err
+        })
+    }
     
 })
 
