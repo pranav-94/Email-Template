@@ -24,7 +24,7 @@ const App = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-4">
       <h1 className="text-2xl font-semibold mb-6">Professional Email Generator</h1>
-      <div className="w-[70%] bg-white rounded-lg shadow-md p-6">
+      <div className="md:w-[70%] w-[90%] rounded-lg shadow-md p-6">
         <form className="flex flex-col gap-4">
           <div className="flex flex-col">
             <label htmlFor="name" className="text-sm font-medium">
