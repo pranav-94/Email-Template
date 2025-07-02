@@ -1,3 +1,4 @@
+```typescript
 import express from 'express'
 import { HfInference } from "@huggingface/inference";
 import { configDotenv } from "dotenv";
@@ -45,3 +46,4 @@ router.post('/',async(req,res)=>{
 })
 
 export default router
+```

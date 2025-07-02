@@ -1,3 +1,4 @@
+```
 import express from 'express'
 import { ChatOpenAI } from "@langchain/openai";
 import cors from 'cors'
@@ -18,10 +19,10 @@ const model = new ChatOpenAI({
 })
 
 app.post('/',async(req,res)=>{
-    const { name, purpose, keyPoints } = req.body 
+    const { name, purpose, keyPoints } = req.body
 
     const generate = `
-    Write a professional email for the following: 
+    Write a professional email for the following:
     - Recipient: ${name}
     - Purpose: ${purpose},
     - key Points: ${keyPoints}
@@ -43,3 +44,4 @@ app.post('/',async(req,res)=>{
 })
 
 app.listen(port)
+```
